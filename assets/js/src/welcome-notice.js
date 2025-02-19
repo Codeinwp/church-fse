@@ -15,7 +15,9 @@ function handleWelcomeNotice( $ ) {
 		otterStatus,
 	} = churchFSEData;
 
-	const installBtn = $( '.church-fse-welcome-notice #church-fse-install-otter' );
+	const installBtn = $(
+		'.church-fse-welcome-notice #church-fse-install-otter'
+	);
 	const dismissBtn = $( '.church-fse-welcome-notice .notice-dismiss' );
 	const notice = $( '.church-fse-welcome-notice' );
 	const installText = installBtn.find( '.text' );
