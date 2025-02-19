@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: post-loop-6
  * title: Posts loop grid simple
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: posts, loop, blog, feed, rows, list
  */
 
 return array(
-	'title'      => __( 'Posts loop grid simple', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Posts loop grid simple', 'church-fse' ),
+	'categories' => array( 'church-fse', 'posts' ),
 	'keywords'   => array( 'posts', 'loop', 'blog', 'feed', 'rows', 'list' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"40px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->

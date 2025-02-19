@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  *
  * slug: contact-section
  * title: Columns Section
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: contact
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Columns Section', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns Section', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'contact' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

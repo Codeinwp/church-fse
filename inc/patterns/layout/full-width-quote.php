@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: full-width-quote
  * title: Full-width quote with background
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Full-width, quote, text, inverted, dark
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Full-width columns with image and content', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Full-width columns with image and content', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Full-width', 'quote', 'text', 'inverted', 'dark' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"64px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->

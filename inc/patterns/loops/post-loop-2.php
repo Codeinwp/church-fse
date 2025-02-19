@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: post-loop-2
  * title: Posts loop grid inverted
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: posts, loop, blog, feed, dark, inverted
  */
 
 return array(
-	'title'      => __( 'Posts loop grid inverted', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Posts loop grid inverted', 'church-fse' ),
+	'categories' => array( 'church-fse', 'posts' ),
 	'keywords'   => array( 'posts', 'loop', 'blog', 'feed', 'dark', 'inverted' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"40px","margin":{"top":"0px","bottom":"0px"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->

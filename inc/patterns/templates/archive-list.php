@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: archive-list
  * title: Archive List
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: archive, posts, list
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Archive List', 'neve-fse' ),
-	'categories' => array( 'neve-fse-layouts' ),
+	'title'      => __( 'Archive List', 'church-fse' ),
+	'categories' => array( 'church-fse-layouts' ),
 	'keywords'   => array( 'archive', 'posts', 'list' ),
 	'content'    => '
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->

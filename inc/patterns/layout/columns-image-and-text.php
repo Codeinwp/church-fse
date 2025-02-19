@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: columns-image-and-text
  * title: Columns with image and text
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, content, image, text
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img05 = Assets_Manager::get_image_url( 'neve-fse-img05.jpg' );
+$church_fse_img05 = Assets_Manager::get_image_url( 'church-fse-img05.jpg' );
 
 return array(
-	'title'      => __( 'Columns with image and text', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with image and text', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'content', 'image', 'text' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
@@ -29,7 +29,7 @@ return array(
         <div class="wp-block-column">
             <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
             <figure class="wp-block-image size-full">
-                <img src="' . esc_url( $neve_fse_img05 ) . '" alt=""/>
+                <img src="' . esc_url( $church_fse_img05 ) . '" alt=""/>
             </figure>
             <!-- /wp:image -->
         </div>

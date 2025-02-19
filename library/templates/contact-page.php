@@ -3,7 +3,7 @@
  * Contact Page
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  */
 
@@ -16,11 +16,11 @@ return '<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0"
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/faq-section"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/faq-section"} /-->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/map-section"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/map-section"} /-->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/contact-section"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/contact-section"} /-->
 
 </main>
 <!-- /wp:group -->';

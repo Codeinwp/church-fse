@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: boxed-features-2
  * title: Columns with feature boxes
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, cards, services, dark, inverted
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Columns with feature boxes', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with feature boxes', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'cards', 'services', 'dark', 'inverted' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"32px"}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->

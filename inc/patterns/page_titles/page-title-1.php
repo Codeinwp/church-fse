@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: page-title-1
  * title: Page Title - Simple
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Page Title, Post title
  */
 
 return array(
-	'title'      => __( 'Page Title - Simple', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Page Title - Simple', 'church-fse' ),
+	'categories' => array( 'church-fse', 'posts' ),
 	'keywords'   => array( 'Page Title', 'Post title' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"8px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"8px"}},"layout":{"type":"constrained"}} -->

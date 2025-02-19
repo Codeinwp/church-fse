@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: post-loop-3
  * title: Post cards
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: posts, loop, blog, feed, cards
  */
 
 return array(
-	'title'      => __( 'Post cards', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Post cards', 'church-fse' ),
+	'categories' => array( 'church-fse', 'posts' ),
 	'keywords'   => array( 'posts', 'loop', 'blog', 'feed', 'cards' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"40px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

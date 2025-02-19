@@ -3,18 +3,18 @@
  * Patterns Handler.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace ChurchFSE;
 
 use WP_Block_Pattern_Categories_Registry;
 
 /**
  * Class Block_Patterns
  *
- * @package neve-fse
+ * @package church-fse
  */
 class Block_Patterns {
 
@@ -59,13 +59,13 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'neve-fse'         => array(
-				'label'       => __( 'Neve FSE Patterns', 'neve-fse' ),
-				'description' => __( 'Patterns for several sections and components', 'neve-fse' ),
+			'church-fse'         => array(
+				'label'       => __( 'Church FSE Patterns', 'church-fse' ),
+				'description' => __( 'Patterns for several sections and components', 'church-fse' ),
 			),
-			'neve-fse-layouts' => array(
-				'label'       => __( 'Neve FSE Layouts', 'neve-fse' ),
-				'description' => __( 'Full-page layouts that can be used as templates', 'neve-fse' ),
+			'church-fse-layouts' => array(
+				'label'       => __( 'Church FSE Layouts', 'church-fse' ),
+				'description' => __( 'Full-page layouts that can be used as templates', 'church-fse' ),
 			),
 		);
 
@@ -123,8 +123,8 @@ class Block_Patterns {
 			'page_titles/page-title-5',
 		);
 
-		$this->categories = apply_filters( 'neve_fse_block_patterns_categories', $categories );
-		$this->patterns   = apply_filters( 'neve_fse_block_patterns', $patterns );
+		$this->categories = apply_filters( 'church_fse_block_patterns_categories', $categories );
+		$this->patterns   = apply_filters( 'church_fse_block_patterns', $patterns );
 	}
 
 	/**
@@ -149,13 +149,13 @@ class Block_Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = NEVE_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
+			$file = CHURCH_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
 
 			if ( ! is_file( $file ) ) {
 				continue;
 			}
 
-			register_block_pattern( 'neve-fse/' . $pattern, require $file );
+			register_block_pattern( 'church-fse/' . $pattern, require $file );
 		}
 	}
 }

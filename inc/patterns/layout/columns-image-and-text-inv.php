@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: columns-image-and-text-inv
  * title: Columns with image and text inverted
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, content, text, dark, inverted
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img09 = Assets_Manager::get_image_url( 'neve-fse-img09.jpg' );
+$church_fse_img09 = Assets_Manager::get_image_url( 'church-fse-img09.jpg' );
 
 return array(
-	'title'      => __( 'Columns with image and text inverted', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with image and text inverted', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'content', 'text', 'dark', 'inverted' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
@@ -29,7 +29,7 @@ return array(
         <div class="wp-block-column">
             <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
             <figure class="wp-block-image size-full">
-                <img src="' . esc_url( $neve_fse_img09 ) . '" alt=""/>
+                <img src="' . esc_url( $church_fse_img09 ) . '" alt=""/>
             </figure>
             <!-- /wp:image -->
         </div>

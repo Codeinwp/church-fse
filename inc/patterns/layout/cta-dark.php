@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: cta-dark
  * title: Call to Action with Background Color
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: call to action, CTA, inverted, dark, centered, cover
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Call to Action with Background Color', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Call to Action with Background Color', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'call to action', 'CTA', 'inverted', 'dark', 'centered', 'cover' ),
 	'content'    => '
 <!-- wp:cover {"overlayColor":"ti-bg-inv","minHeight":500,"minHeightUnit":"px","contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"},"margin":{"top":"0","bottom":"0"}}}} -->

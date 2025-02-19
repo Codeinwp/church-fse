@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: full-width-columns-content-image
  * title: Full-width columns with image and content
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Full-width, columns, image, inverted, dark
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$cover_image = Assets_Manager::get_image_url( 'neve-fse-img04.jpg' );
+$cover_image = Assets_Manager::get_image_url( 'church-fse-img04.jpg' );
 
 return array(
-	'title'      => __( 'Full-width columns with image and content', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Full-width columns with image and content', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Full-width', 'columns', 'image', 'inverted', 'dark' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0px","margin":{"top":"0px","bottom":"0px"},"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"default"}} -->

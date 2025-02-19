@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: page-cover-bg-image
  * title: Page Cover with background image
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: call to action, page cover, inverted, dark
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$cover_image = Assets_Manager::get_image_url( 'neve-fse-img04.jpg' );
+$cover_image = Assets_Manager::get_image_url( 'church-fse-img04.jpg' );
 
 return array(
-	'title'      => __( 'Page Cover with background image', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Page Cover with background image', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'call to action', 'page cover', 'inverted', 'dark' ),
 	'content'    => '
 <!-- wp:cover {"url":"' . esc_url( $cover_image ) . '","dimRatio":50,"overlayColor":"ti-bg-inv","minHeight":500,"minHeightUnit":"px","contentPosition":"center center","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"},"margin":{"top":"0","bottom":"0"}}}} -->

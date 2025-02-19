@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  *
  * slug: hero-with-feature-columns
  * title: Hero section with feature columns
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: columns, hero
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Hero section with feature columns', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Hero section with feature columns', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'columns', 'hero' ),
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true,"type":"constrained"}} -->
@@ -30,7 +30,7 @@ return array(
 			<!-- /wp:heading -->
 		
 			<!-- wp:paragraph {"fontSize":"medium"} -->
-			<p class="has-medium-font-size">Build a website for your business or brand, with Neve FSE</p>
+			<p class="has-medium-font-size">Build a website for your business or brand, with Church FSE</p>
 			<!-- /wp:paragraph -->
 		
 			<!-- wp:buttons -->
@@ -47,7 +47,7 @@ return array(
 		<div class="wp-block-column">
 			<!-- wp:image {"align":"center","sizeSlug":"full","linkDestination":"none"} -->
 			<figure class="wp-block-image aligncenter size-full">
-			<img src="' . esc_url( Assets_Manager::get_image_url( 'neve-fse-img13.webp' ) ) . '"/>
+			<img src="' . esc_url( Assets_Manager::get_image_url( 'church-fse-img13.webp' ) ) . '"/>
 			</figure>
 			<!-- /wp:image -->
 		</div>

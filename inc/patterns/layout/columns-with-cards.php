@@ -3,24 +3,24 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: columns-with-cards
  * title: Columns with cards
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, cards, services
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img05 = Assets_Manager::get_image_url( 'neve-fse-img05.jpg' );
-$neve_fse_img10 = Assets_Manager::get_image_url( 'neve-fse-img10.jpg' );
-$neve_fse_img11 = Assets_Manager::get_image_url( 'neve-fse-img11.jpg' );
+$church_fse_img05 = Assets_Manager::get_image_url( 'church-fse-img05.jpg' );
+$church_fse_img10 = Assets_Manager::get_image_url( 'church-fse-img10.jpg' );
+$church_fse_img11 = Assets_Manager::get_image_url( 'church-fse-img11.jpg' );
 
 return array(
-	'title'      => __( 'Columns with cards', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with cards', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'cards', 'services' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"40px"}},"backgroundColor":"ti-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
@@ -30,7 +30,7 @@ return array(
 <div class="wp-block-column">
     <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image size-full">
-        <img src="' . esc_url( $neve_fse_img10 ) . '" alt=""/>
+        <img src="' . esc_url( $church_fse_img10 ) . '" alt=""/>
     </figure>
     <!-- /wp:image -->
 
@@ -55,7 +55,7 @@ return array(
 <div class="wp-block-column">
     <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image size-full">
-        <img src="' . esc_url( $neve_fse_img05 ) . '" alt=""/>
+        <img src="' . esc_url( $church_fse_img05 ) . '" alt=""/>
     </figure>
     <!-- /wp:image -->
 
@@ -80,7 +80,7 @@ return array(
 <div class="wp-block-column">
     <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image size-full">
-        <img src="' . esc_url( $neve_fse_img11 ) . '" alt=""/>
+        <img src="' . esc_url( $church_fse_img11 ) . '" alt=""/>
     </figure>
     <!-- /wp:image -->
 

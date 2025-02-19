@@ -3,11 +3,11 @@
  * Admin class.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace ChurchFSE;
 
 /**
  * Admin class.
@@ -60,86 +60,12 @@ class Admin {
 	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 		add_action( 'admin_notices', array( $this, 'render_survey_notice' ) );
-		add_action( 'wp_ajax_neve_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
-		add_action( 'wp_ajax_neve_fse_dismiss_survey_notice', array( $this, 'remove_survey_notice' ) );
+		add_action( 'wp_ajax_church_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
+		add_action( 'wp_ajax_church_fse_dismiss_survey_notice', array( $this, 'remove_survey_notice' ) );
 		add_action( 'admin_print_scripts', array( $this, 'add_nps_form' ) );
 
-		add_action( 'enqueue_block_editor_assets', array( $this, 'add_fse_design_pack_notice' ) );
-		add_action( 'wp_ajax_neve_fse_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
 		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
-		add_action( 'wp_ajax_neve_fse_set_otter_ref', array( $this, 'set_otter_ref' ) );
-	}
-
-	/**
-	 * Render design pack notice.
-	 *
-	 * @return void
-	 */
-	public function add_fse_design_pack_notice() {
-		if ( ! $this->should_render_design_pack_notice() ) {
-			return;
-		}
-
-		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['design-pack-notice'], 'design-pack-notice' );
-		Assets_Manager::enqueue_script(
-			Assets_Manager::ASSETS_SLUGS['design-pack-notice'],
-			'design-pack-notice',
-			true,
-			array(),
-			array(
-				'nonce'         => wp_create_nonce( 'neve-fse-dismiss-design-pack-notice' ),
-				'otterRefNonce' => wp_create_nonce( 'neve-fse-set-otter-ref' ),
-				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'ajaxAction'    => 'neve_fse_dismiss_design_pack_notice',
-				'buttonLink'    => tsdk_utmify( 'https://themeisle.com/plugins/fse-design-pack', 'editor', 'neve-fse' ),
-				'strings'       => array(
-					'dismiss'    => __( 'Dismiss', 'neve-fse' ),
-					'recommends' => __( 'Neve FSE recommends', 'neve-fse' ),
-					'learnMore'  => __( 'Learn More', 'neve-fse' ),
-					'noticeHtml' => sprintf(
-					/* translators: %s: FSE Design Pack: */
-						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'neve-fse' ),
-						'<strong>FSE Design Pack:</strong>'
-					),
-				),
-			),
-			'designPackNoticeData'
-		);
-	}
-
-	/**
-	 * Should we show the design pack notice?
-	 *
-	 * @return bool
-	 */
-	private function should_render_design_pack_notice() {
-		// Already using.
-		if ( is_plugin_active( 'fse-design-pack/fse-design-pack.php' ) ) {
-			return false;
-		}
-
-		// Notice was dismissed.
-		if ( get_option( Constants::CACHE_KEYS['dismissed-fse-design-pack-notice'], 'no' ) === 'yes' ) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Dismiss the design pack notice.
-	 *
-	 * @return void
-	 */
-	public function remove_design_pack_notice() {
-		if ( ! isset( $_POST['nonce'] ) ) {
-			return;
-		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'neve-fse-dismiss-design-pack-notice' ) ) {
-			return;
-		}
-		update_option( Constants::CACHE_KEYS['dismissed-fse-design-pack-notice'], 'yes' );
-		wp_die();
+		add_action( 'wp_ajax_church_fse_set_otter_ref', array( $this, 'set_otter_ref' ) );
 	}
 
 	/**
@@ -186,7 +112,7 @@ class Admin {
 		}
 
 		// If has been activated for less than 3 days, don't show it.
-		$activated_time = get_option( 'neve_fse_install' );
+		$activated_time = get_option( 'church_fse_install' );
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) < 3 * DAY_IN_SECONDS ) {
 			return false;
 		}
@@ -211,30 +137,30 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'        => wp_create_nonce( 'neve-fse-dismiss-survey-notice' ),
+				'nonce'        => wp_create_nonce( 'church-fse-dismiss-survey-notice' ),
 				'ajaxUrl'      => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'surveyClass'  => 'neve-fse-survey-notice',
-				'surveyAction' => 'neve_fse_dismiss_survey_notice',
+				'surveyClass'  => 'church-fse-survey-notice',
+				'surveyAction' => 'church_fse_dismiss_survey_notice',
 			),
 			'surveyFSENoticeData'
 		);
 
-		$survey_notice  = '<div class="notice notice-info is-dismissible neve-fse-survey-notice">';
+		$survey_notice  = '<div class="notice notice-info is-dismissible church-fse-survey-notice">';
 		$survey_notice .= '<div class="notice-content">';
-		$survey_notice .= '<img class="neve-fse-logo" src="' . esc_url( Assets_Manager::get_image_url( 'neve-fse-logo.svg' ) ) . '" alt="' . esc_attr__( 'Neve FSE Logo', 'neve-fse' ) . '"/>';
+		$survey_notice .= '<img class="church-fse-logo" src="' . esc_url( Assets_Manager::get_image_url( 'church-fse-logo.svg' ) ) . '" alt="' . esc_attr__( 'Church FSE Logo', 'church-fse' ) . '"/>';
 		$survey_notice .= '<div class="notice-copy">';
-		$survey_notice .= '<h1 class="notice-title">' . __( 'We value your feedback', 'neve-fse' ) . '</h1>';
+		$survey_notice .= '<h1 class="notice-title">' . __( 'We value your feedback', 'church-fse' ) . '</h1>';
 		$survey_notice .= '<p class="description">';
-		$survey_notice .= __( 'Thank you for trying Neve FSE. We would love to hear your thoughts on how we can enhance and improve the theme even further. Would you mind taking a moment to share your insights through a quick survey?', 'neve-fse' );
+		$survey_notice .= __( 'Thank you for trying Church FSE. We would love to hear your thoughts on how we can enhance and improve the theme even further. Would you mind taking a moment to share your insights through a quick survey?', 'church-fse' );
 		$survey_notice .= '</p>';
 		$survey_notice .= '<div class="actions">';
 		/* translators: %s: Otter Blocks */
-		$survey_notice .= '<a id="neve-fse-take-survey" target="_blank" rel="noopener noreferrer" href="' . esc_url( 'https://hi507076.typeform.com/neve-fse' ) . '" class="button button-primary button-hero">';
-		$survey_notice .= '<span class="text">' . __( 'Take the survey', 'neve-fse' ) . '</span>';
+		$survey_notice .= '<a id="church-fse-take-survey" target="_blank" rel="noopener noreferrer" href="' . esc_url( 'https://hi507076.typeform.com/church-fse' ) . '" class="button button-primary button-hero">';
+		$survey_notice .= '<span class="text">' . __( 'Take the survey', 'church-fse' ) . '</span>';
 		$survey_notice .= '<span class="dashicons dashicons-external"></span>';
 		$survey_notice .= '</a>';
 		$survey_notice .= '<button class="button button-secondary button-hero later-dismiss">';
-		$survey_notice .= '<span>' . __( 'Maybe later', 'neve-fse' ) . '</span>';
+		$survey_notice .= '<span>' . __( 'Maybe later', 'church-fse' ) . '</span>';
 		$survey_notice .= '</button>';
 		$survey_notice .= '</div>'; // actions.
 		$survey_notice .= '</div>'; // notice-copy.
@@ -263,7 +189,7 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'         => wp_create_nonce( 'neve-fse-dismiss-welcome-notice' ),
+				'nonce'         => wp_create_nonce( 'church-fse-dismiss-welcome-notice' ),
 				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'otterStatus'   => $otter_status,
 				'activationUrl' => esc_url(
@@ -286,44 +212,44 @@ class Admin {
 						admin_url( 'site-editor.php' )
 					) 
 				),
-				'activating'    => __( 'Activating', 'neve-fse' ) . '&hellip;',
-				'installing'    => __( 'Installing', 'neve-fse' ) . '&hellip;',
-				'done'          => __( 'Done', 'neve-fse' ),
+				'activating'    => __( 'Activating', 'church-fse' ) . '&hellip;',
+				'installing'    => __( 'Installing', 'church-fse' ) . '&hellip;',
+				'done'          => __( 'Done', 'church-fse' ),
 			)
 		);
 
-		$notice_html  = '<div class="notice notice-info neve-fse-welcome-notice">';
+		$notice_html  = '<div class="notice notice-info church-fse-welcome-notice">';
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'Otter Blocks preview', 'neve-fse' ) . '"/>';
+		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'Otter Blocks preview', 'church-fse' ) . '"/>';
 
 		$notice_html .= '<div class="notice-copy">';
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power up your website building experience with %s!', 'neve-fse' ), '<span>Otter Blocks</span>' );
+		$notice_html .= sprintf( __( 'Power up your website building experience with %s!', 'church-fse' ), '<span>Otter Blocks</span>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders.', 'neve-fse' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders.', 'church-fse' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
 		/* translators: %s: Otter Blocks */
-		$notice_html .= '<button id="neve-fse-install-otter" class="button button-primary button-hero">';
+		$notice_html .= '<button id="church-fse-install-otter" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
 		$notice_html .= 'installed' === $otter_status ?
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Activate %s', 'neve-fse' ), 'Otter Blocks' ) :
+			sprintf( __( 'Activate %s', 'church-fse' ), 'Otter Blocks' ) :
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Install & Activate %s', 'neve-fse' ), 'Otter Blocks' );
+			sprintf( __( 'Install & Activate %s', 'church-fse' ), 'Otter Blocks' );
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
 		$notice_html .= '<a href="https://wordpress.org/plugins/otter-blocks/" target="_blank" class="button button-secondary button-hero">';
-		$notice_html .= '<span>' . __( 'Learn More', 'neve-fse' ) . '</span>';
+		$notice_html .= '<span>' . __( 'Learn More', 'church-fse' ) . '</span>';
 		$notice_html .= '<span class="dashicons dashicons-external"></span>';
 		$notice_html .= '</a>';
 
@@ -346,7 +272,7 @@ class Admin {
 		if ( ! isset( $_POST['nonce'] ) ) {
 			return;
 		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'neve-fse-dismiss-welcome-notice' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'church-fse-dismiss-welcome-notice' ) ) {
 			return;
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -362,7 +288,7 @@ class Admin {
 		if ( ! isset( $_POST['nonce'] ) ) {
 			return;
 		}
-		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'neve-fse-dismiss-survey-notice' ) ) {
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'church-fse-dismiss-survey-notice' ) ) {
 			return;
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-survey-notice'], 'yes' );
@@ -418,7 +344,7 @@ class Admin {
 		}
 
 		// Dismiss after one week from activation.
-		$activated_time = get_option( 'neve_fse_install' );
+		$activated_time = get_option( 'church_fse_install' );
 
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > WEEK_IN_SECONDS ) {
 			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -472,7 +398,7 @@ class Admin {
 		}
 
 		// Dismiss after two days from activation.
-		$activated_time = get_option( 'neve_fse_install' );
+		$activated_time = get_option( 'church_fse_install' );
 
 		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > ( 2 * DAY_IN_SECONDS ) ) {
 			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
@@ -496,11 +422,11 @@ class Admin {
 	 * @return void
 	 */
 	public function set_otter_ref() {
-		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'neve-fse-set-otter-ref' ) ) {
+		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'church-fse-set-otter-ref' ) ) {
 			return;
 		}
 
-		update_option( self::OTTER_REF, 'neve-fse' );
+		update_option( self::OTTER_REF, 'church-fse' );
 
 		wp_send_json_success();
 	}
@@ -519,9 +445,9 @@ class Admin {
 			$config = array(
 				'environmentId' => 'clr7hcws7et2g8up0tpz8u8es',
 				'apiHost'       => 'https://app.formbricks.com',
-				'userId'        => 'neve_fse_' . $website_url,
+				'userId'        => 'church_fse_' . $website_url,
 				'attributes'    => array(
-					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'neve_fse_install', time() ) ) / DAY_IN_SECONDS ) ),
+					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'church_fse_install', time() ) ) / DAY_IN_SECONDS ) ),
 				),
 			);
 

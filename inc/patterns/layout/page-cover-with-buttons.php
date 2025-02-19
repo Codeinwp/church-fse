@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: page-cover-with-buttons
  * title: Page Cover with Buttons
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Hero, Page Hero, Cover
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$cover_image = Assets_Manager::get_image_url( 'neve-fse-img12.jpg' );
+$cover_image = Assets_Manager::get_image_url( 'church-fse-img12.jpg' );
 
 return array(
-	'title'      => __( 'Page Cover with Buttons', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Page Cover with Buttons', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Hero', 'Page Hero', 'Cover' ),
 	'content'    => '
 <!-- wp:cover {"url":"' . esc_url( $cover_image ) . '","dimRatio":0,"overlayColor":"ti-bg-inv","minHeight":600,"minHeightUnit":"px","contentPosition":"center center","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
@@ -33,7 +33,7 @@ return array(
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-            <p class="has-text-align-center has-medium-font-size">Build a website for your business or brand, with Neve FSE</p>
+            <p class="has-text-align-center has-medium-font-size">Build a website for your business or brand, with Church FSE</p>
             <!-- /wp:paragraph -->
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

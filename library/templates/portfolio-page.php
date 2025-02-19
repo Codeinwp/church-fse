@@ -3,7 +3,7 @@
  * Portfolio Page
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  */
 
@@ -16,11 +16,11 @@ return '<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0"
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/portfolio-columns"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/portfolio-columns"} /-->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/columns-testimonials-inv"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/columns-testimonials-inv"} /-->
 
-<!-- wp:pattern {"slug":"neve-fse/layout/cta-dark"} /-->
+<!-- wp:pattern {"slug":"church-fse/layout/cta-dark"} /-->
 
 </main>
 <!-- /wp:group -->';

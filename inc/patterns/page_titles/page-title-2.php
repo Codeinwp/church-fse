@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: page-title-2
  * title: Page Title - Dark
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Page Title, Post title, background, inverted, dark
  */
 
 return array(
-	'title'      => __( 'Page Title - Dark', 'neve-fse' ),
-	'categories' => array( 'neve-fse', 'posts' ),
+	'title'      => __( 'Page Title - Dark', 'church-fse' ),
+	'categories' => array( 'church-fse', 'posts' ),
 	'keywords'   => array( 'Page Title', 'Post title', 'background', 'inverted', 'dark' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"8px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-inv","textColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

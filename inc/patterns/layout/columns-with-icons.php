@@ -3,24 +3,24 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: columns-with-icons
  * title: Columns with icons
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, icons, features
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$icon_image01 = Assets_Manager::get_image_url( 'neve-fse-img01.svg' );
-$icon_image02 = Assets_Manager::get_image_url( 'neve-fse-img02.svg' );
-$icon_image03 = Assets_Manager::get_image_url( 'neve-fse-img03.svg' );
+$icon_image01 = Assets_Manager::get_image_url( 'church-fse-img01.svg' );
+$icon_image02 = Assets_Manager::get_image_url( 'church-fse-img02.svg' );
+$icon_image03 = Assets_Manager::get_image_url( 'church-fse-img03.svg' );
 
 return array(
-	'title'      => __( 'Columns with icons', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with icons', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'icons', 'features' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px","right":"24px","left":"24px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

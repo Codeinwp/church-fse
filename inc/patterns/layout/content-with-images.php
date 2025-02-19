@@ -3,24 +3,24 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: content-with-images
  * title: Content with images
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Content, images, text
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img05 = Assets_Manager::get_image_url( 'neve-fse-img05.jpg' );
-$neve_fse_img10 = Assets_Manager::get_image_url( 'neve-fse-img10.jpg' );
-$neve_fse_img04 = Assets_Manager::get_image_url( 'neve-fse-img04.jpg' );
+$church_fse_img05 = Assets_Manager::get_image_url( 'church-fse-img05.jpg' );
+$church_fse_img10 = Assets_Manager::get_image_url( 'church-fse-img10.jpg' );
+$church_fse_img04 = Assets_Manager::get_image_url( 'church-fse-img04.jpg' );
 
 return array(
-	'title'      => __( 'Content with images', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Content with images', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Content', 'images', 'text' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
@@ -37,13 +37,13 @@ return array(
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"size-full"} -->
-<figure class="wp-block-image size-full"><img src="' . esc_url( $neve_fse_img05 ) . '" alt=""/></figure>
+<figure class="wp-block-image size-full"><img src="' . esc_url( $church_fse_img05 ) . '" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"size-full"} -->
-<figure class="wp-block-image size-full"><img src="' . esc_url( $neve_fse_img10 ) . '" alt=""/></figure>
+<figure class="wp-block-image size-full"><img src="' . esc_url( $church_fse_img10 ) . '" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -51,7 +51,7 @@ return array(
 <!-- wp:columns {"verticalAlignment":"bottom","align":"wide"} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-bottom"><!-- wp:column {"verticalAlignment":"bottom","width":"66%"} -->
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:66%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"size-full"} -->
-<figure class="wp-block-image size-large size-full"><img src="' . esc_url( $neve_fse_img04 ) . '" alt=""/></figure>
+<figure class="wp-block-image size-large size-full"><img src="' . esc_url( $church_fse_img04 ) . '" alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

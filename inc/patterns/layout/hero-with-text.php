@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  *
  * slug: hero-with-text
  * title: Hero section with text
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: hero
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Hero section with text', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Hero section with text', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'hero' ),
 	'content'    => '
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
@@ -28,7 +28,7 @@ return array(
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Build a website for your business or brand, with Neve FSE</p>
+<p class="has-medium-font-size">Build a website for your business or brand, with Church FSE</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

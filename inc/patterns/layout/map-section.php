@@ -3,22 +3,22 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: map-section
  * title: Map Section
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: contact
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$map_image = Assets_Manager::get_image_url( 'neve-fse-img14.webp' );
+$map_image = Assets_Manager::get_image_url( 'church-fse-img14.webp' );
 
 return array(
-	'title'      => __( 'Map Section', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Map Section', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'contact' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->

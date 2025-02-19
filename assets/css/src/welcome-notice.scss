@@ -1,7 +1,7 @@
 @custom-media --tablet (max-width: 769px);
 @custom-media --desktop (max-width: 1200px);
 
-.neve-fse-welcome-notice {
+.church-fse-welcome-notice {
 	position: relative;
 	padding-bottom: 0;
 
@@ -100,14 +100,14 @@
 	}
 }
 
-.neve-fse-survey-notice {
+.church-fse-survey-notice {
 
 	.notice-content {
 		display: flex;
 		gap: 12px;
 		align-items: flex-start;
 
-		.neve-fse-logo {
+		.church-fse-logo {
 			width: 64px;
 			min-width: 64px;
 			margin-top: 12px;

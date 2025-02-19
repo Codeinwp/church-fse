@@ -3,23 +3,23 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: portfolio-columns
  * title: Columns with portfolio items
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, portfolio, cover
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img04 = Assets_Manager::get_image_url( 'neve-fse-img04.jpg' );
-$neve_fse_img05 = Assets_Manager::get_image_url( 'neve-fse-img05.jpg' );
+$church_fse_img04 = Assets_Manager::get_image_url( 'church-fse-img04.jpg' );
+$church_fse_img05 = Assets_Manager::get_image_url( 'church-fse-img05.jpg' );
 
 return array(
-	'title'      => __( 'Columns with portfolio items', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with portfolio items', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'portfolio', 'cover' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
@@ -32,10 +32,10 @@ return array(
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
         <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
-            <!-- wp:cover {"url":"' . esc_url( $neve_fse_img05 ) . '","dimRatio":10,"overlayColor":"ti-bg-inv","contentPosition":"bottom left","isDark":false,"style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
+            <!-- wp:cover {"url":"' . esc_url( $church_fse_img05 ) . '","dimRatio":10,"overlayColor":"ti-bg-inv","contentPosition":"bottom left","isDark":false,"style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
             <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-left" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
                 <span aria-hidden="true" class="wp-block-cover__background has-ti-bg-inv-background-color has-background-dim-10 has-background-dim"></span>
-                <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $neve_fse_img05 ) . '" data-object-fit="cover"/>
+                <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $church_fse_img05 ) . '" data-object-fit="cover"/>
                 <div class="wp-block-cover__inner-container">
                     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
                     <div class="wp-block-buttons">
@@ -52,10 +52,10 @@ return array(
 
         <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
         <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
-            <!-- wp:cover {"url":"' . esc_url( $neve_fse_img04 ) . '","dimRatio":10,"overlayColor":"ti-bg-inv","contentPosition":"bottom left","isDark":false,"style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
+            <!-- wp:cover {"url":"' . esc_url( $church_fse_img04 ) . '","dimRatio":10,"overlayColor":"ti-bg-inv","contentPosition":"bottom left","isDark":false,"style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
             <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-left" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
                 <span aria-hidden="true" class="wp-block-cover__background has-ti-bg-inv-background-color has-background-dim-10 has-background-dim"></span>
-                <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $neve_fse_img04 ) . '" data-object-fit="cover"/>
+                <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $church_fse_img04 ) . '" data-object-fit="cover"/>
                 <div class="wp-block-cover__inner-container">
                     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
                     <div class="wp-block-buttons">

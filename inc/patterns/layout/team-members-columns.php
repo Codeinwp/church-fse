@@ -3,24 +3,24 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: team-members-columns
  * title: Columns with Team members
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Columns, team members
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img06 = Assets_Manager::get_image_url( 'neve-fse-img06.jpg' );
-$neve_fse_img07 = Assets_Manager::get_image_url( 'neve-fse-img07.jpg' );
-$neve_fse_img08 = Assets_Manager::get_image_url( 'neve-fse-img08.jpg' );
+$church_fse_img06 = Assets_Manager::get_image_url( 'church-fse-img06.jpg' );
+$church_fse_img07 = Assets_Manager::get_image_url( 'church-fse-img07.jpg' );
+$church_fse_img08 = Assets_Manager::get_image_url( 'church-fse-img08.jpg' );
 
 return array(
-	'title'      => __( 'Columns with Team members', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with Team members', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Columns', 'team members' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"40px"}},"backgroundColor":"ti-bg-alt","layout":{"inherit":true,"type":"constrained","justifyContent":"center"}} -->
@@ -41,7 +41,7 @@ return array(
 <div class="wp-block-group has-ti-bg-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
     <!-- wp:image {"align":"center","width":100,"height":100,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
     <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded">
-        <img src="' . esc_url( $neve_fse_img08 ) . '" alt="" width="100" height="100"/>
+        <img src="' . esc_url( $church_fse_img08 ) . '" alt="" width="100" height="100"/>
     </figure>
     <!-- /wp:image -->
 
@@ -73,7 +73,7 @@ return array(
 <div class="wp-block-group has-ti-bg-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
     <!-- wp:image {"align":"center","width":100,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
     <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded">
-        <img src="' . esc_url( $neve_fse_img07 ) . '" alt="" width="100"/>
+        <img src="' . esc_url( $church_fse_img07 ) . '" alt="" width="100"/>
     </figure>
     <!-- /wp:image -->
 
@@ -106,7 +106,7 @@ return array(
 <div class="wp-block-group has-ti-bg-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
     <!-- wp:image {"align":"center","width":100,"height":100,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
     <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded">
-        <img src="' . esc_url( $neve_fse_img06 ) . '" alt="" width="100" height="100"/>
+        <img src="' . esc_url( $church_fse_img06 ) . '" alt="" width="100" height="100"/>
     </figure>
     <!-- /wp:image -->
 

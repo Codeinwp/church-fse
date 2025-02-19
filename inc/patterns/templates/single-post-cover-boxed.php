@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: single-post-cover-boxed
  * title: Single Post 2 (Cover Boxed)
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: single, post, cover, boxed
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Single Post 2 (Cover Boxed)', 'neve-fse' ),
-	'categories' => array( 'neve-fse-layouts' ),
+	'title'      => __( 'Single Post 2 (Cover Boxed)', 'church-fse' ),
+	'categories' => array( 'church-fse-layouts' ),
 	'keywords'   => array( 'single', 'post', 'cover', 'boxed' ),
 	'content'    => '
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->

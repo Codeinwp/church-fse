@@ -1,4 +1,4 @@
-/* global neveFSEData, jQuery */
+/* global churchFSEData, jQuery */
 
 import { installPlugin, activatePlugin } from './common/plugin-install';
 
@@ -13,11 +13,11 @@ function handleWelcomeNotice( $ ) {
 		nonce,
 		otterRefNonce,
 		otterStatus,
-	} = neveFSEData;
+	} = churchFSEData;
 
-	const installBtn = $( '.neve-fse-welcome-notice #neve-fse-install-otter' );
-	const dismissBtn = $( '.neve-fse-welcome-notice .notice-dismiss' );
-	const notice = $( '.neve-fse-welcome-notice' );
+	const installBtn = $( '.church-fse-welcome-notice #church-fse-install-otter' );
+	const dismissBtn = $( '.church-fse-welcome-notice .notice-dismiss' );
+	const notice = $( '.church-fse-welcome-notice' );
 	const installText = installBtn.find( '.text' );
 	const installSpinner = installBtn.find( '.dashicons' );
 
@@ -35,7 +35,7 @@ function handleWelcomeNotice( $ ) {
 
 		await $.post( ajaxUrl, {
 			nonce: otterRefNonce,
-			action: 'neve_fse_set_otter_ref',
+			action: 'church_fse_set_otter_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
@@ -67,7 +67,7 @@ function handleWelcomeNotice( $ ) {
 	$( dismissBtn ).on( 'click', () => {
 		$.post( ajaxUrl, {
 			nonce,
-			action: 'neve_fse_dismiss_welcome_notice',
+			action: 'church_fse_dismiss_welcome_notice',
 			success: hideAndRemoveNotice,
 		} );
 	} );

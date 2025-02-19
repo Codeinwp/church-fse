@@ -3,23 +3,23 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: columns-content-images
  * title: Columns with content and images
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Content, images, text, columns
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
-$neve_fse_img05 = Assets_Manager::get_image_url( 'neve-fse-img05.jpg' );
-$neve_fse_img09 = Assets_Manager::get_image_url( 'neve-fse-img09.jpg' );
+$church_fse_img05 = Assets_Manager::get_image_url( 'church-fse-img05.jpg' );
+$church_fse_img09 = Assets_Manager::get_image_url( 'church-fse-img09.jpg' );
 
 return array(
-	'title'      => __( 'Columns with content and images', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with content and images', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Content', 'images', 'text', 'columns' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"64px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
@@ -50,7 +50,7 @@ return array(
 <div class="wp-block-column">
     <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"size-full"} -->
     <figure class="wp-block-image size-full">
-        <img src="' . esc_url( $neve_fse_img09 ) . '" alt=""/>
+        <img src="' . esc_url( $church_fse_img09 ) . '" alt=""/>
     </figure>
     <!-- /wp:image -->
 </div>
@@ -60,7 +60,7 @@ return array(
 <div class="wp-block-column">
     <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"size-full"} -->
     <figure class="wp-block-image size-full">
-        <img src="' . esc_url( $neve_fse_img05 ) . '" alt=""/>
+        <img src="' . esc_url( $church_fse_img05 ) . '" alt=""/>
     </figure>
     <!-- /wp:image -->
 </div>

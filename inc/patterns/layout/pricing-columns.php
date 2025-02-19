@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  *
  * slug: pricing-columns
  * title: Columns with Pricing
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: Pricing, plans, columns
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Columns with Pricing', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with Pricing', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'Pricing', 'plans', 'columns' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"40px"}},"layout":{"inherit":true,"type":"constrained"}} -->

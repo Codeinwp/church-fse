@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.1.0
  *
  * slug: columns-with-services-text
  * title: Columns with Services Text
- * categories: NeveFSE
+ * categories: ChurchFSE
  * keywords: columns, services, features, 3col
  */
 
-use NeveFSE\Assets_Manager;
+use ChurchFSE\Assets_Manager;
 
 return array(
-	'title'      => __( 'Columns with Services Text', 'neve-fse' ),
-	'categories' => array( 'neve-fse' ),
+	'title'      => __( 'Columns with Services Text', 'church-fse' ),
+	'categories' => array( 'church-fse' ),
 	'keywords'   => array( 'columns', 'services', 'features', '3col' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

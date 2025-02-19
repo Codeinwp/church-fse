@@ -3,16 +3,16 @@
  * Starter content.
  *
  * @author Themeisle
- * @package neve-fse
+ * @package church-fse
  * @since 1.0.0
  */
 
-namespace NeveFSE;
+namespace ChurchFSE;
 
 /**
  * Class Starter Content
  *
- * @package neve-fse
+ * @package church-fse
  */
 class Starter_Content {
 	const HOME_SLUG = 'home';
