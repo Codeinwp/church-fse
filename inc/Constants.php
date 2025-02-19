@@ -16,8 +16,8 @@ namespace ChurchFSE;
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice'         => 'church-fse-welcome-notice-dismissed',
-		'dismissed-survey-notice'          => 'church-fse-survey-notice-dismissed',
+		'dismissed-welcome-notice' => 'church-fse-welcome-notice-dismissed',
+		'dismissed-survey-notice'  => 'church-fse-survey-notice-dismissed',
 	);
 
 	const PRODUCT_KEY = 'church_fse';
