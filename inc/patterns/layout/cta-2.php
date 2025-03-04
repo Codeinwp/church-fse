@@ -28,8 +28,8 @@ return array(
 <p class="has-text-align-center has-small-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><strong>Sanctus Ipsum</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
-<h2 class="wp-block-heading has-text-align-center has-x-large-font-size">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</h2>
+<!-- wp:heading {"textAlign":"center","fontSize":"huge"} -->
+<h1 class="wp-block-heading has-text-align-center has-huge-font-size">A Community of Faith, Worship, and Unwavering Hope</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
@@ -38,7 +38,7 @@ return array(
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Button text</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Make a Donation</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div>
