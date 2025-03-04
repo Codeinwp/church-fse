@@ -32,7 +32,7 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Title goes here</h2>
+<h2 class="wp-block-heading">The Power of Faith and Worship</h2>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"backgroundColor":"ti-accent"} -->
@@ -46,7 +46,7 @@ return array(
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button">Button text</a></div>
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
