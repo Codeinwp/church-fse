@@ -29,7 +29,7 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Title goes here</h2>
+<h2 class="wp-block-heading has-text-align-center">Give with a Generous Heart</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
@@ -38,7 +38,7 @@ return array(
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","backgroundColor":"ti-accent-secondary","width":50,"className":"is-style-fill"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-fill"><a class="wp-block-button__link has-ti-accent-secondary-background-color has-background has-text-align-center wp-element-button">Button text</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-fill"><a class="wp-block-button__link has-ti-accent-secondary-background-color has-background has-text-align-center wp-element-button">Make a Donation</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div>
