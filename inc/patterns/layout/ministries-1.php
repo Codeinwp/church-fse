@@ -30,7 +30,7 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</h2>
+<h2 class="wp-block-heading">Find Your Place at Church FSE</h2>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"backgroundColor":"ti-accent"} -->
@@ -61,7 +61,7 @@ return array(
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Title goes here</h3>
+<h3 class="wp-block-heading">Children’s Ministry</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -79,7 +79,7 @@ return array(
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Title goes here</h3>
+<h3 class="wp-block-heading">Youth & Young Adults</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -97,7 +97,7 @@ return array(
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Title goes here</h3>
+<h3 class="wp-block-heading">Worship & Music Team</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -115,7 +115,7 @@ return array(
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Button text</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
