@@ -26,7 +26,7 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</h2>
+<h2 class="wp-block-heading has-text-align-center">Strengthen Your Faith, Connect with Community</h2>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"align":"center","backgroundColor":"ti-accent"} -->
@@ -38,7 +38,7 @@ return array(
 <div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"radius":"8px"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-ti-bg-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"textAlign":"center","level":3} -->
-<h3 class="wp-block-heading has-text-align-center">Title goes here</h3>
+<h3 class="wp-block-heading has-text-align-center">Inspiring Sermons</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
@@ -50,7 +50,7 @@ return array(
 <!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"radius":"8px"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-ti-bg-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"textAlign":"center","level":3} -->
-<h3 class="wp-block-heading has-text-align-center">Title goes here</h3>
+<h3 class="wp-block-heading has-text-align-center">Engaging Events</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
@@ -62,7 +62,7 @@ return array(
 <!-- wp:column {"width":"100%"} -->
 <div class="wp-block-column" style="flex-basis:100%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-ti-bg-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center","level":3} -->
-<h3 class="wp-block-heading has-text-align-center">Title goes here</h3>
+<h3 class="wp-block-heading has-text-align-center">Ministries for All</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
