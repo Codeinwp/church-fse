@@ -30,7 +30,7 @@ return array(
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Title goes here</h2>
+<h2 class="wp-block-heading">Pastor Mark Reynolds</h2>
 <!-- /wp:heading -->
 
 <!-- wp:separator {"backgroundColor":"ti-accent"} -->
