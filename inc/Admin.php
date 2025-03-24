@@ -51,6 +51,7 @@ class Admin {
 	 */
 	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
+		add_action( 'activated_plugin', array( $this, 'after_wpfs_activation' ) );
 		add_action( 'wp_ajax_church_fse_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_church_fse_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
 	}
@@ -243,6 +244,22 @@ class Admin {
 		}
 
 		return $status;
+	}
+
+	/**
+	 * Run after WP Full Pay activation.
+	 *
+	 * @param string $plugin Plugin name.
+	 *
+	 * @return void
+	 */
+	public function after_wpfs_activation( $plugin ) {
+		if ( 'wp-full-stripe-free/wp-full-stripe.php' !== $plugin ) {
+			return;
+		}
+
+		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
+		exit;
 	}
 
 	/**
