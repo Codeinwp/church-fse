@@ -8,14 +8,15 @@ function handleWelcomeNotice( $ ) {
 		installing,
 		done,
 		activationUrl,
+		redirectUrl,
 		ajaxUrl,
 		nonce,
-		otterRefNonce,
-		otterStatus,
+		wpfpRefNonce,
+		wpfpStatus,
 	} = churchFSEData;
 
 	const installBtn = $(
-		'.church-fse-welcome-notice #church-fse-install-otter'
+		'.church-fse-welcome-notice #church-fse-install-wpfp'
 	);
 	const dismissBtn = $( '.church-fse-welcome-notice .notice-dismiss' );
 	const notice = $( '.church-fse-welcome-notice' );
@@ -30,37 +31,38 @@ function handleWelcomeNotice( $ ) {
 		} );
 	};
 
-	const activateOtter = async () => {
+	const activateWpfp = async () => {
 		installText.text( activating );
 		await activatePlugin( activationUrl );
 
 		await $.post( ajaxUrl, {
-			nonce: otterRefNonce,
-			action: 'church_fse_set_otter_ref',
+			nonce: wpfpRefNonce,
+			action: 'church_fse_set_wpfp_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
 		installSpinner.addClass( 'dashicons-yes' );
 		installText.text( done );
 		setTimeout( hideAndRemoveNotice, 1500 );
+		window.location.replace( redirectUrl );
 	};
 
 	$( installBtn ).on( 'click', async () => {
 		installSpinner.removeClass( 'hidden' );
 		installBtn.attr( 'disabled', true );
 
-		if ( otterStatus === 'active' ) {
+		if ( wpfpStatus === 'active' ) {
 			return;
 		}
 
-		if ( otterStatus === 'installed' ) {
-			await activateOtter();
+		if ( wpfpStatus === 'installed' ) {
+			await activateWpfp();
 			return;
 		}
 
 		installText.text( installing );
-		await installPlugin( 'otter-blocks' );
-		await activateOtter();
+		await installPlugin( 'wp-full-stripe-free' );
+		await activateWpfp();
 	} );
 
 	$( dismissBtn ).on( 'click', () => {
