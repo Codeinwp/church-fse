@@ -106,7 +106,7 @@ class Admin {
 		$notice_html .= '<h2 class="notice-subtitle">';
 		$notice_html .= '<span class="dashicons dashicons-star-filled"></span>';
 		/* translators: %s: 🎉 emoji */
-		$notice_html .= sprintf( __( 'Accept Donations on Your Church Site %s', 'church-fse' ), '🎉'  );
+		$notice_html .= sprintf( __( 'Accept Donations on Your Church Site %s', 'church-fse' ), '🎉' );
 		$notice_html .= '</h2>';
 
 		$notice_html .= '<h1 class="notice-title">';
