@@ -77,6 +77,7 @@ class Block_Patterns {
 			'templates/archive-list',
 
 			// layout patterns.
+			'layout/404',
 			'layout/content-1',
 			'layout/content-2',
 			'layout/cta-1',
