@@ -67,7 +67,7 @@ function check_php() {
  * @return void
  */
 function define_constants() {
-	define( 'CHURCH_FSE_VERSION', '1.0.2' );
+	define( 'CHURCH_FSE_VERSION', '1.0.3' );
 	define( 'CHURCH_FSE_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	define( 'CHURCH_FSE_DIR', trailingslashit( get_template_directory() ) );
 	define( 'CHURCH_FSE_URL', trailingslashit( get_template_directory_uri() ) );
