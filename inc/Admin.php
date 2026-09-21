@@ -57,6 +57,7 @@ class Admin {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
+		add_filter( 'church_fse_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
 	}
 
 	/**
@@ -305,6 +306,27 @@ class Admin {
 		$configs[ CHURCH_FSE_PRODUCT_SLUG ] = $config;
 
 		return $configs;
+	}
+
+	/**
+	 * Get the data for the SDK "Connect your AI agent" module.
+	 *
+	 * @return array<string, string|string[]>
+	 */
+	public function get_ai_connect_metadata() {
+		return array(
+			'name'         => 'Church FSE',
+			'notice_cases' => array(
+				__( 'update your service times in the header', 'church-fse' ),
+				__( 'change your site\'s style', 'church-fse' ),
+				__( 'add an events or sermons section to a page', 'church-fse' ),
+			),
+			'prompts'      => array(
+				__( 'Update the service times in my header to Sundays at 9 and 11 AM.', 'church-fse' ),
+				__( 'Apply the Church FSE style variation with the calm blue palette.', 'church-fse' ),
+				__( 'Add an upcoming events pattern from my theme to the home page, above the footer.', 'church-fse' ),
+			),
+		);
 	}
 
 	/**
