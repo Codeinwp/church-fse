@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2f37ea250b391952890823a59b4b639",
+    "content-hash": "2b072eb4b9bcf13168e6adf4394a986b",
     "packages": [
         {
             "name": "codeinwp/themeisle-sdk",
