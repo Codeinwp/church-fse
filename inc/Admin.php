@@ -291,16 +291,19 @@ class Admin {
 	public function add_black_friday_data( $configs ) {
 		$config = $configs['default'];
 
-		// translators: %1$s - plugin name, %2$s - discount.
-		$message_template = __( 'Need to accept payments or donations? Try %1$s, built by the same team as your theme — now up to %2$s OFF, for a limited time only.', 'church-fse' );
+		if ( defined( 'OTTER_BLOCKS_VERSION' ) || defined( 'OTTER_PRO_VERSION' ) ) {
+			return $configs;
+		}
 
-		$config['dismiss']  = true; // Note: Allow dismiss since it appears on `/wp-admin`.
-		$config['message']  = sprintf( $message_template, 'WP Full Pay', '70%' );
-		$config['sale_url'] = add_query_arg(
+		$config['dismiss'] = true; // Note: Allow dismiss since it appears on `/wp-admin`.
+		// translators: 1. Number of free licenses, 2. The price of the product.
+		$config['message']   = sprintf( __( 'You’re using Church FSE, and the team behind it is celebrating Black Friday by giving away %1$s licences of Otter Pro. A powerful block collection worth %2$s, with advanced blocks, custom CSS, animations, and WooCommerce integration. Claim yours before they run out.', 'church-fse' ), 100, '$69' );
+		$config['cta_label'] = __( 'Get Otter Pro free', 'church-fse' );
+		$config['sale_url']  = add_query_arg(
 			array(
 				'utm_term' => 'free',
 			),
-			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/wpfp-bf', 'bfcm', 'church-fse' ) )
+			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/otter-claim-bf', 'bfcm', 'church-fse' ) )
 		);
 
 		$configs[ CHURCH_FSE_PRODUCT_SLUG ] = $config;
