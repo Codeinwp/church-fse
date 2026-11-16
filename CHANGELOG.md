@@ -1,3 +1,8 @@
+##### [Version 1.0.6](https://github.com/Codeinwp/church-fse/compare/v1.0.5...v1.0.6) (2026-11-16)
+
+- Enhanced security
+- Updated dependencies
+
 ##### [Version 1.0.5](https://github.com/Codeinwp/church-fse/compare/v1.0.4...v1.0.5) (2026-11-02)
 
 - Updated dependencies
