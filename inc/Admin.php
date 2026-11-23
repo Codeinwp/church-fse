@@ -58,6 +58,7 @@ class Admin {
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 		add_filter( 'church_fse_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
+		add_filter( 'church_fse_support_hub_metadata', array( $this, 'get_support_hub_metadata' ) );
 	}
 
 	/**
@@ -328,6 +329,26 @@ class Admin {
 				__( 'Update the service times in my header to Sundays at 9 and 11 AM.', 'church-fse' ),
 				__( 'Apply the Church FSE style variation with the calm blue palette.', 'church-fse' ),
 				__( 'Add an upcoming events pattern from my theme to the home page, above the footer.', 'church-fse' ),
+			),
+		);
+	}
+
+	/**
+	 * Metadata for the Themeisle SDK Support Hub: the footer links shown in the Help form.
+	 *
+	 * Church FSE is a free theme with no Pro tier, so is_pro is always false.
+	 *
+	 * @return array{is_pro: bool, links: array<int, array{icon: string, text: string, url: string}>}
+	 */
+	public function get_support_hub_metadata() {
+		return array(
+			'is_pro' => false,
+			'links'  => array(
+				array(
+					'icon' => 'groups',
+					'text' => __( 'Community Forum', 'church-fse' ),
+					'url'  => 'https://wordpress.org/support/theme/church-fse/',
+				),
 			),
 		);
 	}
