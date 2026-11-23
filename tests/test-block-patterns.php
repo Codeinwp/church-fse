@@ -40,7 +40,7 @@ class Test_Block_Patterns extends WP_UnitTestCase {
 	private $translations = 0;
 
 	/**
-	 * Snapshot the theme categories and track theme translations.
+	 * Snapshot the theme categories.
 	 *
 	 * @return void
 	 */
@@ -54,7 +54,6 @@ class Test_Block_Patterns extends WP_UnitTestCase {
 			}
 		}
 
-		add_filter( 'gettext_church-fse', array( $this, 'mark_translation' ) );
 		add_filter( 'church_fse_block_patterns', '__return_empty_array' );
 	}
 
@@ -116,6 +115,7 @@ class Test_Block_Patterns extends WP_UnitTestCase {
 	 * @return void
 	 */
 	public function test_constructor_does_not_translate_category_labels(): void {
+		add_filter( 'gettext_church-fse', array( $this, 'mark_translation' ) );
 		$this->create_instance();
 
 		$this->assertSame( 0, $this->translations );
@@ -134,7 +134,9 @@ class Test_Block_Patterns extends WP_UnitTestCase {
 			}
 		}
 
-		$this->create_instance()->run();
+		$instance = $this->create_instance();
+		add_filter( 'gettext_church-fse', array( $this, 'mark_translation' ) );
+		$instance->run();
 
 		$patterns = $registry->get_registered( 'church-fse' );
 		$layouts  = $registry->get_registered( 'church-fse-layouts' );
